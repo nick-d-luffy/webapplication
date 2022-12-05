@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>WELCOME TO THE ADD PAGE!</h1>
+<p>You can add your wide selection of movies here!</p>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="text" name="name" placeholder="Enter Movie Name"><br><br>
+  <input type="text" name="desc" placeholder="Enter Movie Description"><br><br>
+  <input type="text" name="year" placeholder="Enter Movie Year"><br><br>
+  <input type="file" name="img"><br><br>
+  <input type="submit" value="Enter The Move Here!">
+
+</form>
+{% endblock %}
+
